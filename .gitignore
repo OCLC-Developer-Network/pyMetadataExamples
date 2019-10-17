@@ -1,0 +1,5 @@
+/venv/
+/config.yml
+/dev_config.yml
+/.project
+/.pydevproject
