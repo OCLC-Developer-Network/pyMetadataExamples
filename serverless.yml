@@ -1,0 +1,52 @@
+service: 
+    name: metadata-python-example
+custom:
+  bucket: test-bucket-for-csvs    
+provider:
+ name: aws
+ runtime: python3.6
+ memorySize: 128
+ timeout: 10
+ stage: production
+ region: us-east-1
+ iamRoleStatements:
+    - Effect: Allow
+      Action:
+       - s3:GetObject
+      Resource: arn:aws:s3:::${self:custom.bucket}/*            
+
+functions:
+    getCurrentOCLCNumbers: 
+        handler: handler.getCurrentOCLCNumbers
+        events:
+         - s3:
+            bucket: ${self:custom.bucket}
+            event: s3:ObjectCreated:*
+            rules:
+              - prefix: checkCurrentOCN/
+              - suffix: .csv         
+    setHoldings: 
+        handler: handler.setHoldingsbyOCLCNumber
+        events:
+         - s3:
+            bucket: ${self:custom.bucket}
+            event: s3:ObjectCreated:*
+            rules:
+              - prefix: setHoldings/
+              - suffix: .csv
+    removeHoldings: 
+        handler: handler.deleteHoldingsbyOCLCNumber
+        events:
+         - s3:
+            bucket: ${self:custom.bucket}
+            event: s3:ObjectCreated:*
+            rules:
+              - prefix: removeHoldings/
+              - suffix: .csv
+resources:
+  Resources:
+    CSVBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.bucket}         
+      
