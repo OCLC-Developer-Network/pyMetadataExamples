@@ -1,0 +1,3 @@
+oclc_number;note
+191865523;this is a note in the LBD
+904968528;signed by author
