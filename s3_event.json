@@ -1,0 +1,38 @@
+{
+  "Records": [
+    {
+      "eventVersion": "2.1",
+      "eventSource": "aws:s3",
+      "awsRegion": "us-east-1",
+      "eventTime": "2018-12-07T17:33:56.754Z",
+      "eventName": "ObjectCreated:Put",
+      "userIdentity": {
+        "principalId": "ALHJRWUTYZA7H"
+      },
+      "requestParameters": {
+        "sourceIPAddress": "76.31.143.158"
+      },
+      "responseElements": {
+        "x-amz-request-id": "5C1EC3CAC666FF61",
+        "x-amz-id-2": "u3+69FugQeEzYTNOLFDr5oO4Ibmx3aVsJDgPIlVez+cJySEG50JZnPc13FxtK13Xu7G+iUkD5o8="
+      },
+      "s3": {
+        "s3SchemaVersion": "1.0",
+        "configurationId": "AddCSV",
+        "bucket": {
+          "name": "test-bucket-for-csvs",
+          "ownerIdentity": {
+            "principalId": "ALHJRWUTYZA7H"
+          },
+          "arn": "arn:aws:s3:::test-bucket-for-csvs"
+        },
+        "object": {
+          "key": "checkCurrentOCN/oclc_numbers.csv",
+          "size": 105,
+          "eTag": "d9d0c0b2d9f0d7e5d9fbaf058296788c",
+          "sequencer": "005C0AAF04795BE7CD"
+        }
+      }
+    }
+  ]
+}
