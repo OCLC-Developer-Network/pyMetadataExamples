@@ -18,7 +18,8 @@ os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 with open("config.yml", 'r') as stream:
     config = yaml.load(stream)
     
-serviceURL = config.get('metadata_service_url')    
+serviceURL = config.get('metadata_service_url')  
+institution_symbol = config.get('institution_symbol')  
 # get a token
 scope = ['WorldCatMetadataAPI']
 auth = HTTPBasicAuth(config.get('key'), config.get('secret'))
