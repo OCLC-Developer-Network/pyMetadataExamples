@@ -5,10 +5,11 @@ from oauthlib.oauth2 import BackendApplicationClient
 from requests.auth import HTTPBasicAuth
 from requests_oauthlib import OAuth2Session
 import requests
+import pymarc
 from pymarc import Record, Field
 import os
-import pymarc
 from io import StringIO
+import time
 from xml.etree import ElementTree
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
@@ -73,14 +74,28 @@ def deleteHolding(oclcnumber):
 
 def addLBD(oclcnumber, note):
     #create the LBD
-    record = Record()
+    record = Record(leader='00000n   a2200000   4500')
     record.add_field(Field(tag='004', data=oclcnumber))
     record.add_field(
         Field(
+            indicators = [' ', ' '],
             tag = '500',
             subfields = [
                 'a', note
-            ]))
+            ]),
+        Field(
+            indicators = [' ', ' '],
+            tag = '935',
+            subfields = [
+                'a', str(time.time())
+            ]),
+        Field(
+            indicators = [' ', ' '],
+            tag = '940',
+            subfields = [
+                'a', institution_symbol
+            ])
+        )
     input = pymarc.record_to_xml(record).decode("utf-8")
     
     try:
