@@ -124,12 +124,12 @@ def addLBD(oclcnumber, note):
         status = "failed"
     return pd.Series([oclc_number, accessionNumber, status])  
     
-def saveFile(bucket, csv_dict):
+def saveFile(bucket, filename, csv_dict):
     csv_buffer = StringIO()    
     csv_dict.to_csv(csv_buffer, sep="|", index=False)
 
     try:
-        write_response = s3.put_object(Bucket=bucket, Body=csv_buffer.getvalue())
+        write_response = s3.put_object(Bucket=bucket, key= filename, Body=csv_buffer.getvalue())
         return "success"
     except ClientError as err:
         error_message = "Operation complete - output write failed"
@@ -147,7 +147,7 @@ def getCurrentOCLCNumbers(event, context):
     csv_read = pd.read_csv(item_file, sep="|", dtype={'Item_Call_Number': 'object'}, index_col=False)
     csv_read[['oclcnumber', 'status']] = csv_read.apply (lambda row: getCurrentOCLCNum(row['oclcNumber']), axis=1)    
          
-    return saveFile(bucket, csv_read)    
+    return saveFile(bucket, key + "_updated", csv_read)    
 
 def setHoldingsbyOCLCNumber(event, context):  
     
@@ -159,7 +159,7 @@ def setHoldingsbyOCLCNumber(event, context):
     csv_read = pd.read_csv(item_file, sep="|", dtype={'Item_Call_Number': 'object'}, index_col=False)
     csv_read[['oclcnumber', 'status']] = csv_read.apply (lambda row: setHolding(row['oclcNumber']), axis=1)    
      
-    return saveFile(bucket, csv_read)
+    return saveFile(bucket, key + "_updated", csv_read)
 
 def deleteHoldingsbyOCLCNumber(event, context):  
     
@@ -171,7 +171,7 @@ def deleteHoldingsbyOCLCNumber(event, context):
     csv_read = pd.read_csv(item_file, sep="|", dtype={'Item_Call_Number': 'object'}, index_col=False)
     csv_read[['oclcnumber', 'status']] = csv_read.apply (lambda row: deleteHolding(oclcnumber)(row['oclcNumber']), axis=1)    
      
-    return saveFile(bucket, csv_read)
+    return saveFile(bucket, key + "_updated", csv_read)
 
 def addLBDs(event, context):  
     
@@ -183,5 +183,5 @@ def addLBDs(event, context):
     csv_read = pd.read_csv(item_file, sep="|", dtype={'Item_Call_Number': 'object'}, index_col=False)
     csv_read[['oclcnumber', 'lbd_number', 'status']] = csv_read.apply (lambda row: addLBD(row['oclcNumber'], row['note']), axis=1)    
      
-    return saveFile(bucket, csv_read)
+    return saveFile(bucket, key + "_updated", csv_read)
   
