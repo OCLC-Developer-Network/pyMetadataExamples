@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+    <content type="application/xml">
+        <response xmlns="http://worldcat.org/rb" mimeType="application/vnd.oclc.marc21+xml">
+            <record xmlns="http://www.loc.gov/MARC21/slim">
+                <leader>00000n   a2200000   4500</leader>
+                <controlfield tag="001">1204719824</controlfield>
+                <controlfield tag="004">945434309</controlfield>
+                <controlfield tag="005">20191118140603.2</controlfield>
+                <datafield tag="500" ind1=" " ind2=" ">
+                    <subfield code="a">Test Note FOR OCLC DEVELOPER NETWORK DOCUMENTATION</subfield>
+                </datafield>
+                <datafield tag="935" ind1=" " ind2=" ">
+                    <subfield code="a">1574103620</subfield>
+                </datafield>
+                <datafield tag="940" ind1=" " ind2=" ">
+                    <subfield code="a">OCPSB</subfield>
+                </datafield>
+            </record>
+        </response>
+    </content>
+    <id>http://worldcat.org/lbd/data/1204719824</id>
+    <link href="http://worldcat.org/lbd/data/1204719824"></link>
+</entry>
