@@ -21,7 +21,7 @@ s3 = boto3.client('s3')
 # load key/secret config info
 # read a configuration file
 with open("config.yml", 'r') as stream:
-    config = yaml.load(stream)
+    config = yaml.safe_load(stream)
     
 serviceURL = config.get('metadata_service_url')  
 institution_symbol = config.get('institution_symbol')  
