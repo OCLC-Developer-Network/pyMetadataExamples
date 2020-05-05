@@ -3,3 +3,8 @@
 /dev_config.yml
 /.project
 /.pydevproject
+/__pycache__/
+/int_config.yml
+/src/__pycache__/
+/tests/__pycache__/
+/.serverless
