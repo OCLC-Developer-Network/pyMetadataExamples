@@ -2,7 +2,7 @@ import pytest
 import json
 import requests_mock
 import pandas
-import handler
+from src import make_requests
 
 with open('tests/mocks/getCurrentOCLCNumber.json', 'r') as myfile:
     data=myfile.read()
@@ -10,11 +10,12 @@ with open('tests/mocks/getCurrentOCLCNumber.json', 'r') as myfile:
 # parse file
 currentOCLCNumberMock = json.loads(data)
 
-def test_getCurrentOCLCNum(requests_mock):
+def test_getCurrentOCLCNumber(requests_mock, mockOAuthSession, getTestConfig):
+    getTestConfig.update({'oauth-session': mockOAuthSession})
     oclcNumber = "2416076"
     requests_mock.register_uri('GET', 'https://worldcat.org/bib/checkcontrolnumbers?oclcNumbers=' + oclcNumber, status_code=207, json=currentOCLCNumberMock)
-    bib = handler.getCurrentOCLCNum(oclcNumber);
-    assert type(user) is pandas.core.series.Series
+    bib = make_requests.getCurrentOCLCNumber(getTestConfig, oclcNumber);
+    assert type(bib) is pandas.core.series.Series
     assert bib[0] == '2416076'
     assert bib[1] == '24991049'
     assert bib[2] == 'success'

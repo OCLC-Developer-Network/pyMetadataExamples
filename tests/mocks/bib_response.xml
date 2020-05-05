@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <content type="application/xml">
+    <response xmlns="http://worldcat.org/rb" mimeType="application/vnd.oclc.marc21+xml">
+      <record xmlns="http://www.loc.gov/MARC21/slim">
+        <leader>00000cam a2200000 a 4500</leader>
+        <controlfield tag="001">ocn311684437</controlfield>
+        <controlfield tag="003">OCoLC</controlfield>
+        <controlfield tag="005">20200327224019.6</controlfield>
+        <controlfield tag="008">080916s2009    paua          000 1 eng  </controlfield>
+        <datafield tag="010" ind1=" " ind2=" ">
+          <subfield code="a">  2008937609</subfield>
+    </datafield>
+        <datafield tag="040" ind1=" " ind2=" ">
+          <subfield code="a">DLC</subfield>
+          <subfield code="b">eng</subfield>
+          <subfield code="c">DLC</subfield>
+          <subfield code="d">BTCTA</subfield>
+          <subfield code="d">YDXCP</subfield>
+          <subfield code="d">UPZ</subfield>
+          <subfield code="d">WIQ</subfield>
+          <subfield code="d">MR0</subfield>
+          <subfield code="d">XL4</subfield>
+          <subfield code="d">PAU</subfield>
+          <subfield code="d">LMR</subfield>
+          <subfield code="d">VP@</subfield>
+          <subfield code="d">OBE</subfield>
+          <subfield code="d">UKM</subfield>
+          <subfield code="d">ON8</subfield>
+          <subfield code="d">ZAD</subfield>
+          <subfield code="d">EYP</subfield>
+          <subfield code="d">HBP</subfield>
+          <subfield code="d">VRC</subfield>
+          <subfield code="d">IWL</subfield>
+          <subfield code="d">TXBXL</subfield>
+          <subfield code="d">MEUBL</subfield>
+          <subfield code="d">BDX</subfield>
+          <subfield code="d">IAD</subfield>
+          <subfield code="d">P4I</subfield>
+          <subfield code="d">KPY</subfield>
+          <subfield code="d">WAU</subfield>
+          <subfield code="d">OVY</subfield>
+          <subfield code="d">CNNWL</subfield>
+          <subfield code="d">NZPPC</subfield>
+          <subfield code="d">WVX</subfield>
+          <subfield code="d">OCLCO</subfield>
+          <subfield code="d">OCLCQ</subfield>
+          <subfield code="d">OCLCO</subfield>
+          <subfield code="d">IVV</subfield>
+          <subfield code="d">OCLCQ</subfield>
+          <subfield code="d">OCLCO</subfield>
+          <subfield code="d">OCLCF</subfield>
+          <subfield code="d">OCLCO</subfield>
+          <subfield code="d">TXMLI</subfield>
+          <subfield code="d">P@N</subfield>
+          <subfield code="d">DCB</subfield>
+          <subfield code="d">OCLCO</subfield>
+          <subfield code="d">OCL</subfield>
+          <subfield code="d">OCLCQ</subfield>
+          <subfield code="d">TCJ</subfield>
+          <subfield code="d">OCLCO</subfield>
+          <subfield code="d">WAU</subfield>
+          <subfield code="d">OCLCO</subfield>
+          <subfield code="d">CNO</subfield>
+          <subfield code="d">OCL</subfield>
+          <subfield code="d">OCLCO</subfield>
+          <subfield code="d">OCLCA</subfield>
+          <subfield code="d">WAU</subfield>
+          <subfield code="d">GILDS</subfield>
+          <subfield code="d">PRN</subfield>
+          <subfield code="d">OCL</subfield>
+          <subfield code="d">DKC</subfield>
+          <subfield code="d">TL4</subfield>
+          <subfield code="d">OCLCO</subfield>
+          <subfield code="d">GZN</subfield>
+          <subfield code="d">TNX</subfield>
+          <subfield code="d">OCLCO</subfield>
+          <subfield code="d">TU7</subfield>
+          <subfield code="d">JX9</subfield>
+          <subfield code="d">WAU</subfield>
+          <subfield code="d">EQF</subfield>
+          <subfield code="d">OCLCA</subfield>
+          <subfield code="d">OCL</subfield>
+          <subfield code="d">WAU</subfield>
+          <subfield code="d">BUF</subfield>
+          <subfield code="d">MIR</subfield>
+    </datafield>
+        <datafield tag="015" ind1=" " ind2=" ">
+          <subfield code="a">GBA977206</subfield>
+          <subfield code="2">bnb</subfield>
+    </datafield>
+        <datafield tag="016" ind1="7" ind2=" ">
+          <subfield code="a">015342153</subfield>
+          <subfield code="2">Uk</subfield>
+    </datafield>
+        <datafield tag="019" ind1=" " ind2=" ">
+          <subfield code="a">261176486</subfield>
+          <subfield code="a">330361568</subfield>
+          <subfield code="a">377707240</subfield>
+          <subfield code="a">426228842</subfield>
+          <subfield code="a">701739996</subfield>
+          <subfield code="a">716923895</subfield>
+          <subfield code="a">731216527</subfield>
+          <subfield code="a">887752101</subfield>
+          <subfield code="a">945738851</subfield>
+          <subfield code="a">1045429884</subfield>
+    </datafield>
+        <datafield tag="020" ind1=" " ind2=" ">
+          <subfield code="a">9781594743344</subfield>
+          <subfield code="q">(pbk. ;</subfield>
+          <subfield code="q">alk. paper)</subfield>
+    </datafield>
+        <datafield tag="020" ind1=" " ind2=" ">
+          <subfield code="a">1594743347</subfield>
+          <subfield code="q">(pbk. ;</subfield>
+          <subfield code="q">alk. paper)</subfield>
+    </datafield>
+        <datafield tag="020" ind1=" " ind2=" ">
+          <subfield code="a">9781594743351</subfield>
+          <subfield code="q">(pbk. ;</subfield>
+          <subfield code="q">alk. paper)</subfield>
+    </datafield>
+        <datafield tag="020" ind1=" " ind2=" ">
+          <subfield code="a">1594743355</subfield>
+          <subfield code="q">(pbk. ;</subfield>
+          <subfield code="q">alk. paper)</subfield>
+    </datafield>
+        <datafield tag="020" ind1=" " ind2=" ">
+          <subfield code="a">9781594744518</subfield>
+          <subfield code="q">(hbk.)</subfield>
+    </datafield>
+        <datafield tag="020" ind1=" " ind2=" ">
+          <subfield code="a">1594744513</subfield>
+          <subfield code="q">(hbk.)</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">AU@</subfield>
+          <subfield code="b">000043839587</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">AU@</subfield>
+          <subfield code="b">000044205433</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">AU@</subfield>
+          <subfield code="b">000044218081</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">AU@</subfield>
+          <subfield code="b">000054552395</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">CBK</subfield>
+          <subfield code="b">120281791</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">COVCL</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">DEBBG</subfield>
+          <subfield code="b">BV035970551</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">LBRUT</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">NLGGC</subfield>
+          <subfield code="b">321202333</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">NLNZL</subfield>
+          <subfield code="b">9913384163502836</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">NOK</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">NOK</subfield>
+          <subfield code="b">1594744513</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">NZ1</subfield>
+          <subfield code="b">12866253</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">NZ1</subfield>
+          <subfield code="b">1338416</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">NZ1</subfield>
+          <subfield code="b">14508856</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">OXFCL</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">REABC</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKBCI</subfield>
+          <subfield code="b">120281791</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKBCI</subfield>
+          <subfield code="b">12033044X</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKBED</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKBFB</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKBNS</subfield>
+          <subfield code="b">120281791</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKBNS</subfield>
+          <subfield code="b">12033044X</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKBNT</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKBOR</subfield>
+          <subfield code="b">12033044X</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKBUR</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKCHS</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKDEL</subfield>
+          <subfield code="b">120281791</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKDLI</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKDON</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKDOR</subfield>
+          <subfield code="b">120281791</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKGTH</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKJSY</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKKCC</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKKUT</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKLBB</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKLCL</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKLLS</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKNLL</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKNWH</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKNWP</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKPMH</subfield>
+          <subfield code="b">120281791</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKSCO</subfield>
+          <subfield code="b">120281791</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKSCO</subfield>
+          <subfield code="b">12033044X</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKSCO</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKSFD</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKSGC</subfield>
+          <subfield code="b">120281791</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKSGC</subfield>
+          <subfield code="b">12033044X</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKSGC</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKSOM</subfield>
+          <subfield code="b">120281791</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKSOM</subfield>
+          <subfield code="b">12033044X</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKSUS</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UKTLS</subfield>
+          <subfield code="b">120281791</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UNITY</subfield>
+          <subfield code="b">120281791</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">UNITY</subfield>
+          <subfield code="b">12033044X</subfield>
+    </datafield>
+        <datafield tag="029" ind1="1" ind2=" ">
+          <subfield code="a">WARCC</subfield>
+          <subfield code="b">1594743347</subfield>
+    </datafield>
+        <datafield tag="035" ind1=" " ind2=" ">
+          <subfield code="a">(OCoLC)311684437</subfield>
+          <subfield code="z">(OCoLC)261176486</subfield>
+          <subfield code="z">(OCoLC)330361568</subfield>
+          <subfield code="z">(OCoLC)377707240</subfield>
+          <subfield code="z">(OCoLC)426228842</subfield>
+          <subfield code="z">(OCoLC)701739996</subfield>
+          <subfield code="z">(OCoLC)716923895</subfield>
+          <subfield code="z">(OCoLC)731216527</subfield>
+          <subfield code="z">(OCoLC)887752101</subfield>
+          <subfield code="z">(OCoLC)945738851</subfield>
+          <subfield code="z">(OCoLC)1045429884</subfield>
+    </datafield>
+        <datafield tag="037" ind1=" " ind2=" ">
+          <subfield code="b">Chronicle Books Llc, C/O Hachette Book Group USA 3 Center Plaza, Boston, MA, USA, 02108</subfield>
+          <subfield code="n">SAN 200-2205</subfield>
+    </datafield>
+        <datafield tag="043" ind1=" " ind2=" ">
+          <subfield code="a">e-uk-en</subfield>
+    </datafield>
+        <datafield tag="050" ind1="0" ind2="0">
+          <subfield code="a">PS3607.R348</subfield>
+          <subfield code="b">P75 2009</subfield>
+    </datafield>
+        <datafield tag="082" ind1="0" ind2="0">
+          <subfield code="a">813/.6</subfield>
+          <subfield code="2">22</subfield>
+    </datafield>
+        <datafield tag="049" ind1=" " ind2=" ">
+          <subfield code="a">MAIN</subfield>
+    </datafield>
+        <datafield tag="100" ind1="1" ind2=" ">
+          <subfield code="a">Grahame-Smith, Seth,</subfield>
+          <subfield code="e">author.</subfield>
+    </datafield>
+        <datafield tag="245" ind1="1" ind2="0">
+          <subfield code="a">Pride and prejudice and zombies :</subfield>
+          <subfield code="b">the classic regency romance--now with ultraviolent zombie mayhem /</subfield>
+          <subfield code="c">by Jane Austen and Seth Grahame-Smith.</subfield>
+    </datafield>
+        <datafield tag="260" ind1=" " ind2=" ">
+          <subfield code="a">Philadelphia :</subfield>
+          <subfield code="b">Quirk Books ;</subfield>
+          <subfield code="a">San Francisco :</subfield>
+          <subfield code="b">Distributed in North America by Chronicle Books,</subfield>
+          <subfield code="c">©2009.</subfield>
+    </datafield>
+        <datafield tag="300" ind1=" " ind2=" ">
+          <subfield code="a">335 pages :</subfield>
+          <subfield code="b">illustrations ;</subfield>
+          <subfield code="c">21 cm.</subfield>
+    </datafield>
+        <datafield tag="336" ind1=" " ind2=" ">
+          <subfield code="a">text</subfield>
+          <subfield code="b">txt</subfield>
+          <subfield code="2">rdacontent</subfield>
+    </datafield>
+        <datafield tag="337" ind1=" " ind2=" ">
+          <subfield code="a">unmediated</subfield>
+          <subfield code="b">n</subfield>
+          <subfield code="2">rdamedia</subfield>
+    </datafield>
+        <datafield tag="338" ind1=" " ind2=" ">
+          <subfield code="a">volume</subfield>
+          <subfield code="b">nc</subfield>
+          <subfield code="2">rdacarrier</subfield>
+    </datafield>
+        <datafield tag="490" ind1="1" ind2=" ">
+          <subfield code="a">Quirk classics</subfield>
+    </datafield>
+        <datafield tag="520" ind1=" " ind2=" ">
+          <subfield code="a">As a mysterious plague falls upon the village of Meryton and zombies start rising from the dead, Elizabeth Bennet is determined to destroy the evil menace, but becomes distracted by the arrival of the dashing and arrogant Mr. Darcy.</subfield>
+    </datafield>
+        <datafield tag="600" ind1="1" ind2="0">
+          <subfield code="a">Austen, Jane,</subfield>
+          <subfield code="d">1775-1817</subfield>
+          <subfield code="v">Parodies, imitations, etc.</subfield>
+    </datafield>
+        <datafield tag="600" ind1="1" ind2="0">
+          <subfield code="a">Bennet, Elizabeth</subfield>
+          <subfield code="c">(Fictitious character)</subfield>
+          <subfield code="v">Fiction.</subfield>
+    </datafield>
+        <datafield tag="600" ind1="1" ind2="0">
+          <subfield code="a">Darcy, Fitzwilliam</subfield>
+          <subfield code="c">(Fictitious character)</subfield>
+          <subfield code="v">Fiction.</subfield>
+    </datafield>
+        <datafield tag="650" ind1=" " ind2="0">
+          <subfield code="a">Zombies</subfield>
+          <subfield code="z">England</subfield>
+          <subfield code="v">Fiction.</subfield>
+    </datafield>
+        <datafield tag="650" ind1=" " ind2="0">
+          <subfield code="a">Young women</subfield>
+          <subfield code="z">England</subfield>
+          <subfield code="v">Fiction.</subfield>
+    </datafield>
+        <datafield tag="650" ind1=" " ind2="0">
+          <subfield code="a">Social classes</subfield>
+          <subfield code="z">England</subfield>
+          <subfield code="v">Fiction.</subfield>
+    </datafield>
+        <datafield tag="650" ind1=" " ind2="0">
+          <subfield code="a">Sisters</subfield>
+          <subfield code="z">England</subfield>
+          <subfield code="v">Fiction.</subfield>
+    </datafield>
+        <datafield tag="651" ind1=" " ind2="0">
+          <subfield code="a">England</subfield>
+          <subfield code="v">Fiction.</subfield>
+    </datafield>
+        <datafield tag="600" ind1="1" ind2="7">
+          <subfield code="a">Austen, Jane,</subfield>
+          <subfield code="d">1775-1817.</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst00032929</subfield>
+    </datafield>
+        <datafield tag="600" ind1="1" ind2="7">
+          <subfield code="a">Bennet, Elizabeth</subfield>
+          <subfield code="c">(Fictitious character)</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst00830497</subfield>
+    </datafield>
+        <datafield tag="600" ind1="1" ind2="7">
+          <subfield code="a">Darcy, Fitzwilliam</subfield>
+          <subfield code="c">(Fictitious character)</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst00887810</subfield>
+    </datafield>
+        <datafield tag="650" ind1=" " ind2="7">
+          <subfield code="a">Sisters.</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst01119758</subfield>
+    </datafield>
+        <datafield tag="650" ind1=" " ind2="7">
+          <subfield code="a">Social classes.</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst01122346</subfield>
+    </datafield>
+        <datafield tag="650" ind1=" " ind2="7">
+          <subfield code="a">Young women.</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst01183301</subfield>
+    </datafield>
+        <datafield tag="650" ind1=" " ind2="7">
+          <subfield code="a">Zombies.</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst01184595</subfield>
+    </datafield>
+        <datafield tag="651" ind1=" " ind2="7">
+          <subfield code="a">England.</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst01219920</subfield>
+    </datafield>
+        <datafield tag="600" ind1="1" ind2="7">
+          <subfield code="a">Austen, Jane,</subfield>
+          <subfield code="d">1775-1817</subfield>
+          <subfield code="v">Parodies, imitations, etc.</subfield>
+          <subfield code="2">sears</subfield>
+    </datafield>
+        <datafield tag="650" ind1=" " ind2="7">
+          <subfield code="a">Darcy, Fitzwilliam (Fictional character)</subfield>
+          <subfield code="v">Fiction.</subfield>
+          <subfield code="2">sears</subfield>
+    </datafield>
+        <datafield tag="650" ind1=" " ind2="7">
+          <subfield code="a">Bennet, Elizabeth (Fictional character)</subfield>
+          <subfield code="v">Fiction.</subfield>
+          <subfield code="2">sears</subfield>
+    </datafield>
+        <datafield tag="650" ind1=" " ind2="7">
+          <subfield code="a">Zombies</subfield>
+          <subfield code="v">Fiction.</subfield>
+          <subfield code="2">sears</subfield>
+    </datafield>
+        <datafield tag="655" ind1=" " ind2="0">
+          <subfield code="a">Horror tales.</subfield>
+    </datafield>
+        <datafield tag="655" ind1=" " ind2="7">
+          <subfield code="a">Parodies, imitations, etc.</subfield>
+          <subfield code="2">fast</subfield>
+          <subfield code="0">(OCoLC)fst01423840</subfield>
+    </datafield>
+        <datafield tag="655" ind1=" " ind2="7">
+          <subfield code="a">Regency fiction.</subfield>
+          <subfield code="2">gsafd</subfield>
+    </datafield>
+        <datafield tag="655" ind1=" " ind2="7">
+          <subfield code="a">Novels.</subfield>
+          <subfield code="2">lcgft</subfield>
+    </datafield>
+        <datafield tag="655" ind1=" " ind2="7">
+          <subfield code="a">Zombie fiction.</subfield>
+          <subfield code="2">lcgft</subfield>
+    </datafield>
+        <datafield tag="655" ind1=" " ind2="7">
+          <subfield code="a">Horror fiction.</subfield>
+          <subfield code="2">lcgft</subfield>
+    </datafield>
+        <datafield tag="655" ind1=" " ind2="7">
+          <subfield code="a">Romance fiction.</subfield>
+          <subfield code="2">lcgft</subfield>
+    </datafield>
+        <datafield tag="655" ind1=" " ind2="7">
+          <subfield code="a">Humorous fiction.</subfield>
+          <subfield code="2">lcgft</subfield>
+    </datafield>
+        <datafield tag="655" ind1=" " ind2="7">
+          <subfield code="a">Historical fiction.</subfield>
+          <subfield code="2">lcgft</subfield>
+    </datafield>
+        <datafield tag="655" ind1=" " ind2="7">
+          <subfield code="a">Parodies (Literature)</subfield>
+          <subfield code="2">lcgft</subfield>
+    </datafield>
+        <datafield tag="655" ind1=" " ind2="7">
+          <subfield code="a">Regency novels.</subfield>
+          <subfield code="2">sears</subfield>
+    </datafield>
+        <datafield tag="700" ind1="1" ind2=" ">
+          <subfield code="i">Parody of (work):</subfield>
+          <subfield code="a">Austen, Jane,</subfield>
+          <subfield code="d">1775-1817.</subfield>
+          <subfield code="4">http://rdaregistry.info/Elements/w/P10197</subfield>
+          <subfield code="t">Pride and prejudice.</subfield>
+    </datafield>
+        <datafield tag="830" ind1=" " ind2="0">
+          <subfield code="a">Quirk classics.</subfield>
+    </datafield>
+        <datafield tag="938" ind1=" " ind2=" ">
+          <subfield code="a">Brodart</subfield>
+          <subfield code="b">BROD</subfield>
+          <subfield code="n">12691976</subfield>
+          <subfield code="c">$24.45</subfield>
+    </datafield>
+        <datafield tag="938" ind1=" " ind2=" ">
+          <subfield code="a">Baker and Taylor</subfield>
+          <subfield code="b">BTCP</subfield>
+          <subfield code="n">BK0008400789</subfield>
+    </datafield>
+        <datafield tag="938" ind1=" " ind2=" ">
+          <subfield code="a">YBP Library Services</subfield>
+          <subfield code="b">YANK</subfield>
+          <subfield code="n">3333668</subfield>
+    </datafield>
+        <datafield tag="938" ind1=" " ind2=" ">
+          <subfield code="a">YBP Library Services</subfield>
+          <subfield code="b">YANK</subfield>
+          <subfield code="n">2950898</subfield>
+    </datafield>
+        <datafield tag="938" ind1=" " ind2=" ">
+          <subfield code="a">YBP Library Services</subfield>
+          <subfield code="b">YANK</subfield>
+          <subfield code="n">8524157</subfield>
+    </datafield>
+  </record>
+    </response>
+  </content>
+  <id>http://worldcat.org/oclc/311684437</id>
+  <link href="http://worldcat.org/oclc/311684437"></link>
+</entry>

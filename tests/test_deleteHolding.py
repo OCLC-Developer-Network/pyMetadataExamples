@@ -2,18 +2,13 @@ import pytest
 import json
 import requests_mock
 import pandas
-import handler
+from src import make_requests
 
-with open('tests/mocks/deleteHolding.json', 'r') as myfile:
-    data=myfile.read()
-
-# parse file
-deleteHolding = json.loads(data)
-
-def test_deleteHolding(requests_mock):
+def test_deleteHolding(requests_mock, mockOAuthSession, getTestConfig):
+    getTestConfig.update({'oauth-session': mockOAuthSession})
     oclcNumber = "2416076"
-    requests_mock.register_uri('DELETE', 'https://worldcat.org//ih/data?oclcNumber=' + oclcNumber, status_code=200, json=deleteHolding)
-    holding = handler.deleteHolding(oclcNumber);
+    requests_mock.register_uri('DELETE', 'https://worldcat.org/ih/data?oclcNumber=' + oclcNumber, status_code=200, json="")
+    holding = make_requests.deleteHolding(getTestConfig, oclcNumber);
     assert type(holding) is pandas.core.series.Series
     assert holding[0] == '2416076'
     assert holding[1] == 'success'

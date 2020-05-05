@@ -1,0 +1,7 @@
+key: key
+secret: secret
+auth_url: https://oauth.oclc.org/auth
+token_url: https://oauth.oclc.org/token
+metadata_service_url: https://worldcat.org
+base_path: /
+institution_symbol: OCPSB
