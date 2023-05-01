@@ -1,14 +1,8 @@
 {
-  "entry": [
+  "controlNumbers": [
     {
-      "requestedOclcNumber": "2416076",
-      "currentOclcNumber": "24991049",
-      "httpStatusCode": "HTTP 200 OK",
-      "id": "http://worldcat.org/oclc/24991049",
-      "institution": "OCPSB"
+      "requested": "2416076",
+      "current": "24991049"
     }
-  ],
-  "startIndex": 1,
-  "totalResults": 1,
-  "itemsPerPage": 1
+  ]
 }
