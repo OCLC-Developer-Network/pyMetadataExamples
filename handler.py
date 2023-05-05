@@ -18,9 +18,7 @@ def getCurrentOCLCNumbers(event, context):
     item_file = handle_files.readFilesFromBucket(event)
     csv_read = handle_files.loadCSV(item_file)
     csv_read = process_data.retrieveCurrentOCLCNumbers(processConfig, csv_read)
-    handle_files.saveFileToBucket(fileInfo['bucket'], fileInfo['key'] + "_updated", csv_read)   
-         
-    return saveFile(bucket, key + "_updated", csv_read)    
+    handle_files.saveFileToBucket(fileInfo['bucket'], fileInfo['key'] + "_updated", csv_read)               
 
 def getMergedOCLCNumbers(event, context):
     item_file = handle_files.readFilesFromBucket(event)

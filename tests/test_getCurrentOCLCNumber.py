@@ -13,7 +13,7 @@ currentOCLCNumberMock = json.loads(data)
 def test_getCurrentOCLCNumber(requests_mock, mockOAuthSession, getTestConfig):
     getTestConfig.update({'oauth-session': mockOAuthSession})
     oclcNumber = "2416076"
-    requests_mock.register_uri('GET', 'https://metadata.api.oclc.org/worldcat/manage/bibs/current?oclcNumbers' + oclcNumber, status_code=207, json=currentOCLCNumberMock)
+    requests_mock.register_uri('GET', 'https://metadata.api.oclc.org/worldcat/manage/bibs/current?oclcNumbers=' + oclcNumber, status_code=207, json=currentOCLCNumberMock)
     bib = make_requests.getCurrentOCLCNumber(getTestConfig, oclcNumber);
     assert type(bib) is pandas.core.series.Series
     assert bib[0] == '2416076'
