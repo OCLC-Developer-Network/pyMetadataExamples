@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+    <leader>00000nx  a2200000zi 4500</leader>
+    <controlfield tag="001">84297596</controlfield>
+    <controlfield tag="004">191865523</controlfield>
+    <controlfield tag="005">20110328194445.101</controlfield>
+    <controlfield tag="007">zu</controlfield>
+    <controlfield tag="008">1103280u    8   4001ubund0110328</controlfield>
+    <datafield tag="035" ind1=" " ind2=" ">
+        <subfield code="a">(OCoLC)191865523</subfield>
+    </datafield>
+    <datafield tag="852" ind1="0" ind2=" ">
+        <subfield code="a">OCPSB</subfield>
+        <subfield code="b">MAIN</subfield>
+        <subfield code="c">MAIN-STACKS</subfield>
+        <subfield code="h">Curr.C. j</subfield>
+        <subfield code="i">Myr67</subfield>
+        <subfield code="k">DVD</subfield>
+        <subfield code="m">Ref.</subfield>
+    </datafield>
+    <datafield tag="876" ind1=" " ind2=" ">
+        <subfield code="p">67888888888</subfield>
+    </datafield>
+</record>
