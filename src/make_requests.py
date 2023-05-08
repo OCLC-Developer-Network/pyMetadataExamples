@@ -182,3 +182,20 @@ def addLHR(config, oclcnumber, oclcSymbol, branch, shelfLocation, classPart, ite
     except requests.exceptions.HTTPError as err:
         status = "failed"
     return pd.Series([oclcnumber, accessionNumber, status])
+
+def findBibMatch(config, record):
+    oauth_session = config.get('oauth-session')
+    try:
+        r = oauth_session.post(config.get('metadata_service_url') + "/bibs/match", data=input, headers={"Accept":'application/xml"', "Content-Type": "application/xml"})
+        r.raise_for_status
+        try:
+            result = r.json()
+            oclcNumber = result['briefRecords'][0]['oclcNumber']
+            status = "success"
+        except xml.etree.ElementTree.ParseError  as err:
+            oclcNumber = ""
+            status = "failed XML parsing issue"
+            print(err)
+    except requests.exceptions.HTTPError as err:
+        status = "failed"
+    return pd.Series([oclcNumber, status])

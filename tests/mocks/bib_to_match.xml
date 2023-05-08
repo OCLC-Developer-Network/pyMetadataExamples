@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+  <leader>00000cam a2200000 a 4500</leader>
+  <controlfield tag="005">20200327224019.6</controlfield>
+  <controlfield tag="008">080916s2009    paua          000 1 eng  </controlfield>
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">  2008937609</subfield>
+  </datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">9781594743344</subfield>
+    <subfield code="q">(pbk. ;</subfield>
+    <subfield code="q">alk. paper)</subfield>
+</datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">1594743347</subfield>
+    <subfield code="q">(pbk. ;</subfield>
+    <subfield code="q">alk. paper)</subfield>
+</datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">9781594743351</subfield>
+    <subfield code="q">(pbk. ;</subfield>
+    <subfield code="q">alk. paper)</subfield>
+</datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">1594743355</subfield>
+    <subfield code="q">(pbk. ;</subfield>
+    <subfield code="q">alk. paper)</subfield>
+</datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">9781594744518</subfield>
+    <subfield code="q">(hbk.)</subfield>
+</datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">1594744513</subfield>
+    <subfield code="q">(hbk.)</subfield>
+</datafield>
+  <datafield tag="082" ind1="0" ind2="0">
+    <subfield code="a">813/.6</subfield>
+    <subfield code="2">22</subfield>
+</datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Grahame-Smith, Seth,</subfield>
+    <subfield code="e">author.</subfield>
+</datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Pride and prejudice and zombies :</subfield>
+    <subfield code="b">the classic regency romance--now with ultraviolent zombie mayhem /</subfield>
+    <subfield code="c">by Jane Austen and Seth Grahame-Smith.</subfield>
+</datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">Philadelphia :</subfield>
+    <subfield code="b">Quirk Books ;</subfield>
+    <subfield code="a">San Francisco :</subfield>
+    <subfield code="b">Distributed in North America by Chronicle Books,</subfield>
+    <subfield code="c">©2009.</subfield>
+</datafield>
+  <datafield tag="600" ind1="1" ind2="7">
+    <subfield code="a">Austen, Jane,</subfield>
+    <subfield code="d">1775-1817</subfield>
+    <subfield code="v">Parodies, imitations, etc.</subfield>
+    <subfield code="2">sears</subfield>
+</datafield>
+  <datafield tag="650" ind1=" " ind2="7">
+    <subfield code="a">Darcy, Fitzwilliam (Fictional character)</subfield>
+    <subfield code="v">Fiction.</subfield>
+    <subfield code="2">sears</subfield>
+</datafield>
+  <datafield tag="650" ind1=" " ind2="7">
+    <subfield code="a">Bennet, Elizabeth (Fictional character)</subfield>
+    <subfield code="v">Fiction.</subfield>
+    <subfield code="2">sears</subfield>
+</datafield>
+  <datafield tag="650" ind1=" " ind2="7">
+    <subfield code="a">Zombies</subfield>
+    <subfield code="v">Fiction.</subfield>
+    <subfield code="2">sears</subfield>
+</datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Regency novels.</subfield>
+    <subfield code="2">sears</subfield>
+</datafield>
+</record>

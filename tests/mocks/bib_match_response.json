@@ -1,0 +1,47 @@
+{
+  "numberOfRecords": 3,
+  "briefRecords": [
+    {
+      "oclcNumber": "311684437",
+      "title": "Pride and prejudice and zombies : the classic regency romance--now with ultraviolent zombie mayhem",
+      "creator": "Seth Grahame-Smith",
+      "date": "2009",
+      "machineReadableDate": "2009",
+      "language": "eng",
+      "generalFormat": "Book",
+      "specificFormat": "PrintBook",
+      "edition": "",
+      "publisher": "Quirk Books",
+      "publicationPlace": "Philadelphia",
+      "isbns": [
+        "9781594743344",
+        "1594743347",
+        "9781594743351",
+        "1594743355",
+        "9781594744518",
+        "1594744513"
+      ],
+      "issns": [],
+      "mergedOclcNumbers": [
+        "261176486",
+        "330361568",
+        "377707240",
+        "426228842",
+        "701739996",
+        "716923895",
+        "731216527",
+        "887752101",
+        "945738851",
+        "1045429884",
+        "1201885873",
+        "1202008371"
+      ],
+      "catalogingInfo": {
+        "catalogingAgency": "DLC",
+        "catalogingLanguage": "eng",
+        "levelOfCataloging": " ",
+        "transcribingAgency": "DLC"
+      }
+    }
+  ]
+}
