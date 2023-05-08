@@ -5,7 +5,7 @@ import pandas as pd
 import json
 import requests
 import pymarc
-from pymarc import Record, Field
+from pymarc import Record, Field, Subfield
 from io import StringIO
 import xml
 from xml.etree import ElementTree
@@ -24,11 +24,11 @@ def createOAuthSession(config, scope):
 def getCurrentOCLCNumber(config, oclcnumber):
     oauth_session = config.get('oauth-session')
     try:        
-        r = oauth_session.get(config.get('metadata_service_url') + "/bib/checkcontrolnumbers?oclcNumbers=" + oclcnumber, headers={"Accept":"application/json"})
+        r = oauth_session.get(config.get('metadata_service_url') + "/bibs/current?oclcNumbers=" + oclcnumber, headers={"Accept":"application/json"})
         r.raise_for_status
         try:
             result = r.json()
-            currentOCLCNumber = result['entry'][0]['currentOclcNumber']
+            currentOCLCNumber = result['controlNumbers'][0]['current']
             status = "success"
         except json.decoder.JSONDecodeError:
             currentOCLCNumber = ""
@@ -41,15 +41,10 @@ def getCurrentOCLCNumber(config, oclcnumber):
 def getMergedOCLCNumbers(config, oclcnumber):
     oauth_session = config.get('oauth-session')
     try:
-        r = oauth_session.get(config.get('metadata_service_url') +"/bib/data/" + str(oclcnumber), headers={"Accept":'application/atom+xml;content="application/vnd.oclc.marc21+xml"'})
+        r = oauth_session.get(config.get('metadata_service_url') +"/bibs/" + str(oclcnumber), headers={"Accept":'application/atom+xml;content="application/vnd.oclc.marc21+xml"'})
         r.raise_for_status
         try:
-            result = ElementTree.fromstring(r.content)
-            ns = {'atom': 'http://www.w3.org/2005/Atom', 'wc': 'http://worldcat.org/rb'}
-            marcNode = result.findall('atom:content/wc:response', ns)[0].getchildren()[0]
-            marcData = StringIO(ElementTree.tostring(marcNode, encoding='unicode', method='xml'))
-            # need to get this XML section out as a string and into a file like object
-            marcRecords = pymarc.parse_xml_to_array(marcData)
+            marcRecords = pymarc.parse_xml_to_array(StringIO(r.text))
             # pull out the merged OCLC Numbers
             mergedOCNFields = marcRecords[0]['019'].get_subfields('a')
             mergedOCLCNumbers= list(map(lambda field: field, mergedOCNFields))
@@ -67,7 +62,7 @@ def getMergedOCLCNumbers(config, oclcnumber):
 def setHolding(config, oclcnumber):
     oauth_session = config.get('oauth-session')
     try:
-        r = oauth_session.post(config.get('metadata_service_url') + "/ih/data?oclcNumber=" + oclcnumber, headers={"Accept":"application/json"})
+        r = oauth_session.post(config.get('metadata_service_url') + "/institution/holdings/" + oclcnumber + "/set", headers={"Accept":"application/json"})
         r.raise_for_status
         try:
             result = r.json()
@@ -81,7 +76,7 @@ def setHolding(config, oclcnumber):
 def deleteHolding(config, oclcnumber):
     oauth_session = config.get('oauth-session')
     try:
-        r = oauth_session.delete(config.get('metadata_service_url') + "/ih/data?oclcNumber=" + oclcnumber, headers={"Accept":"application/json"})
+        r = oauth_session.post(config.get('metadata_service_url') + "/institution/holdings/" + oclcnumber + "/unset", headers={"Accept":"application/json"})
         r.raise_for_status
         try:
             result = r.json()
@@ -102,35 +97,29 @@ def addLBD(config, oclcnumber, note):
             indicators = [' ', ' '],
             tag = '500',
             subfields = [
-                'a', note
+                Subfield(code='a', value= note)
             ]),
         Field(
             indicators = [' ', ' '],
             tag = '935',
             subfields = [
-                'a', str(time.time())
+                Subfield(code='a', value= str(time.time()))
             ]),
         Field(
             indicators = [' ', ' '],
             tag = '940',
             subfields = [
-                'a', config.get('oclcSymbol')
+                Subfield(code='a', value= config.get('oclcSymbol'))
             ])
         )
     input = pymarc.record_to_xml(record).decode("utf-8")
     
     try:
-        r = oauth_session.post(config.get('metadata_service_url') + "/lbd/data", data=input, headers={"Accept":'application/atom+xml;content="application/vnd.oclc.marc21+xml"', "Content-Type": "application/vnd.oclc.marc21+xml"})
+        r = oauth_session.post(config.get('metadata_service_url') + "/lbds", data=input, headers={"Accept":'application/atom+xml;content="application/vnd.oclc.marc21+xml"', "Content-Type": "application/vnd.oclc.marc21+xml"})
         r.raise_for_status
         try:
-            result = ElementTree.fromstring(r.content)
-            ns = {'atom': 'http://www.w3.org/2005/Atom', 'wc': 'http://worldcat.org/rb'}
-            marcNode = result.findall('atom:content/wc:response', ns)[0].getchildren()[0]
-            marcData = StringIO(ElementTree.tostring(marcNode, encoding='unicode', method='xml'))
-            # need to get this XML section out as a string and into a file like object
-            marcRecords = pymarc.parse_xml_to_array(marcData)
+            marcRecords = pymarc.parse_xml_to_array(StringIO(r.text))
             # pull out the LBD accession number
-            print(marcRecords)
             accessionNumber = marcRecords[0]['001'].value()
             status = "success"
         except xml.etree.ElementTree.ParseError  as err:
@@ -140,3 +129,73 @@ def addLBD(config, oclcnumber, note):
     except requests.exceptions.HTTPError as err:
         status = "failed"
     return pd.Series([oclcnumber, accessionNumber, status])
+
+def addLHR(config, oclcnumber, oclcSymbol, branch, shelfLocation, classPart, itemPart, prefix, suffix, barcode):
+    oauth_session = config.get('oauth-session')
+    #create the LBD
+    record = Record(leader='00000nx  a2200000zi 4500')
+    record.add_field(Field(tag='004', data=oclcnumber))
+    record.add_field(Field(tag='007', data="zu"))
+    record.add_field(
+        Field(
+            indicators = ['', ''],
+            tag = '035',
+            subfields = [
+                Subfield(code='a', value= '(OCoLC)' + oclcnumber)
+            ]
+        )
+    )
+    record.add_field(
+        Field(
+            indicators = [' ', ' '],
+            tag = '852',
+            subfields = [
+                Subfield(code='a', value= oclcSymbol),
+                Subfield(code='b', value= branch),
+                Subfield(code='c', value= shelfLocation),
+                Subfield(code='h', value= classPart),
+                Subfield(code='i', value= itemPart),
+                Subfield(code='k', value= prefix),
+                Subfield(code='m', value= suffix)
+            ]),
+        Field(
+            indicators = [' ', ' '],
+            tag = '876',
+            subfields = [
+                Subfield(code='p', value= barcode)
+            ])
+    )
+    input = pymarc.record_to_xml(record).decode("utf-8")
+
+    try:
+        r = oauth_session.post(config.get('metadata_service_url') + "/lhrs", data=input, headers={"Accept":'application/xml"', "Content-Type": "application/xml"})
+        r.raise_for_status
+        try:
+            marcRecords = pymarc.parse_xml_to_array(StringIO(r.text))
+            # pull out the LBD accession number
+            accessionNumber = marcRecords[0]['001'].value()
+            status = "success"
+        except xml.etree.ElementTree.ParseError  as err:
+            accessionNumber = ""
+            status = "failed XML parsing issue"
+            print(err)
+    except requests.exceptions.HTTPError as err:
+        status = "failed"
+    return pd.Series([oclcnumber, accessionNumber, status])
+
+def findBibMatch(config, record):
+    oauth_session = config.get('oauth-session')
+    try:
+        r = oauth_session.post(config.get('metadata_service_url') + "/bibs/match", data=input, headers={"Accept":'application/xml"', "Content-Type": "application/xml"})
+        r.raise_for_status
+        try:
+            result = r.json()
+            oclcNumber = result['briefRecords'][0]['oclcNumber']
+            status = "success"
+        except xml.etree.ElementTree.ParseError  as err:
+            oclcNumber = ""
+            status = "failed XML parsing issue"
+            print(err)
+    except requests.exceptions.HTTPError as err:
+        status = "failed"
+    return pd.Series([oclcNumber, status])
