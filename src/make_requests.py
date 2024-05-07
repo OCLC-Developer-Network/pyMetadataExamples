@@ -199,3 +199,33 @@ def findBibMatch(config, record):
     except requests.exceptions.HTTPError as err:
         status = "failed"
     return pd.Series([oclcNumber, status])
+
+def getLatestEdition(config, oclcNumber):
+    oauth_session = config.get('oauth-session')
+    requestURL = config.get('metadata_service_url') + "/brief-bibs/" + str(oclcNumber) + "/other-editions?inLanguage=eng&limit=1&orderBy=publicationDateDesc"
+    try:
+        r = requests.get(requestURL, headers={"Accept":"application/json"})
+        r.raise_for_status
+        try:
+            result = r.json()
+            if result.get('briefRecords'):
+                if (str(oclcNumber) == result.get('briefRecords')[0].get('oclcNumber')):
+                    isLatestEdition = "true"
+                elif (result.get('briefRecords')[0].get('mergedOclcNumbers') and str(oclcNumber) in result.get('briefRecords')[0].get('mergedOclcNumbers')):
+                    isLatestEdition = "true"
+                else:
+                    isLatestEdition = "false"
+                latestEditionOCN = result.get('briefRecords')[0].get('oclcNumber')
+                latestEditionYear = result.get('briefRecords')[0].get('date')
+            else:
+                isLatestEdition = ""
+                latestEditionOCN = ""
+                latestEditionYear = ""
+        except json.decoder.JSONDecodeError:
+            isLatestEdition = ""
+            latestEditionOCN = ""
+            latestEditionYear = ""
+    except requests.exceptions.HTTPError as err:
+        status = "failed"
+
+    return pd.Series([isLatestEdition, latestEditionOCN, latestEditionYear, status])
