@@ -21,5 +21,8 @@ def deleteHoldingsbyOCLCNumber(processConfig, csv_read):
 
 def addLBDs(processConfig, csv_read):  
     csv_read[['oclcnumber', 'lbd_number', 'status']] = csv_read.apply (lambda row: addLBD(row['oclcNumber'], row['note']), axis=1)    
-    return csv_read    
-        
+    return csv_read
+
+def getLatestEdition(processConfig, csv_read):
+    csv_read[['oclcnumber', 'isLatestEdition', 'latestEditionOCN', 'year', 'status']] = csv_read.apply (lambda row: getLatestEdition(row['oclcNumber']), axis=1)
+    return csv_read

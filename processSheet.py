@@ -12,7 +12,7 @@ def processArgs():
     try:
         parser = argparse.ArgumentParser()
         parser.add_argument('--itemFile', required=True, help='File you want to process')
-        parser.add_argument('--operation', required=True, choices=['getCurrentOCLCNumbers', 'retrieveMergedOCLCNumbers', 'setHoldingsbyOCLCNumber', 'deleteHoldingsbyOCLCNumber', 'addLBDs'], help='Operation to run: getCurrentOCLCNumbers, retrieveMergedOCLCNumbers, setHoldingsbyOCLCNumber, deleteHoldingsbyOCLCNumber, addLBDs')    
+        parser.add_argument('--operation', required=True, choices=['getCurrentOCLCNumbers', 'retrieveMergedOCLCNumbers', 'setHoldingsbyOCLCNumber', 'deleteHoldingsbyOCLCNumber', 'addLBDs', 'getLatestEdition'], help='Operation to run: getCurrentOCLCNumbers, retrieveMergedOCLCNumbers, setHoldingsbyOCLCNumber, deleteHoldingsbyOCLCNumber, addLBDs')
         parser.add_argument('--outputDir', required=True, help='Directory to save output to')        
     
         args = parser.parse_args()
@@ -43,8 +43,10 @@ def process(args):
         elif operation == "deleteHoldingsbyOCLCNumber":
             csv_read = process_data.deleteHoldingsbyOCLCNumber(processConfig, csv_read)
         elif operation == "addLBDs":
-            csv_read = process_data.addLBDs(processConfig, csv_read)            
-    
+            csv_read = process_data.addLBDs(processConfig, csv_read)
+        elif operation == "getLatestEdition":
+            csv_read = process_data.getLatestEdition(processConfig, csv_read)
+
         return handle_files.saveFileLocal(csv_read, output_dir)
 
     except BaseException as err:
